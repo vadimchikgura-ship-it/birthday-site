@@ -1944,3 +1944,125 @@ button,
         border-radius: 4px;
     }
 }
+
+/* Мобільне компонування готичної головної сторінки */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .hero::after {
+        inset: 6px;
+    }
+
+    .hero__content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        width: 100%;
+        min-width: 0;
+        padding: 58px 16px 32px;
+    }
+
+    .hero__copy,
+    .hero__visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero__badge {
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 9px 11px;
+        font-size: 10px;
+        line-height: 1.65;
+        letter-spacing: 0.08em;
+    }
+
+    .hero__title {
+        margin-bottom: 20px;
+        font-size: clamp(30px, 10.5vw, 46px);
+        line-height: 1.08;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .hero__title span {
+        margin-top: 8px;
+    }
+
+    .hero__text {
+        margin-bottom: 25px;
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .hero__button {
+        width: 100%;
+        padding: 15px 12px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .hero__visual {
+        min-height: 0;
+        padding: 5px 25px 28px;
+    }
+
+    .hero-photo {
+        width: min(100%, 280px);
+        padding: 9px 9px 24px;
+        box-shadow: 6px 8px 0 #050406, 0 15px 30px rgba(0, 0, 0, 0.55);
+        transform: rotate(2deg);
+    }
+
+    .hero-photo__caption {
+        padding-top: 12px;
+        font-size: 16px;
+    }
+
+    .hero-sticker {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+        border-width: 2px;
+    }
+
+    .hero-sticker--heart {
+        top: -8px;
+        right: 5px;
+    }
+
+    .hero-sticker--star {
+        bottom: 25px;
+        left: 3px;
+    }
+
+    .hero-sticker--cake {
+        right: 0;
+        bottom: 55px;
+        width: 45px;
+        height: 45px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        padding: 8px;
+    }
+
+    .hero__content {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .hero__title {
+        font-size: 29px;
+    }
+
+    .hero__visual {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+}
