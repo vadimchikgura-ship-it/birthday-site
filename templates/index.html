@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>С днём рождения ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+>
+
+   <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+>
+</head>
+
+<body>
+
+    <main class="hero">
+
+        <div class="floating-hearts">
+
+            <span style="--position: 8%; --delay: 0s;">♥</span>
+            <span style="--position: 20%; --delay: 2s;">♥</span>
+            <span style="--position: 35%; --delay: 5s;">♥</span>
+
+            <button
+                class="secret-heart"
+                id="secretHeart"
+                style="--position: 52%; --delay: 1s;"
+                aria-label="Открыть секрет"
+            >
+                ♥
+            </button>
+
+            <span style="--position: 68%; --delay: 4s;">♥</span>
+            <span style="--position: 82%; --delay: 3s;">♥</span>
+            <span style="--position: 94%; --delay: 6s;">♥</span>
+
+        </div>
+
+      <div class="hero__content">
+
+    <div class="hero__copy">
+
+        <div class="hero__badge">
+            💌 Маленький подарок специально для Миланы
+        </div>
+
+        <h1 class="hero__title">
+            С днём рождения,
+            <span>моя Киця!</span>
+        </h1>
+
+        <p class="hero__text">
+            Я собрал здесь наши тёплые моменты и слова,
+            которые хочу сегодня сказать именно тебе.
+        </p>
+
+        <button class="hero__button" id="startButton">
+            Открыть мой подарок
+            <span>💗</span>
+        </button>
+
+    </div>
+
+    <div class="hero__visual">
+
+        <div class="hero-photo">
+
+            <img
+                src="{{ url_for('static', filename='images/photo-1.jpg') }}"
+                alt="Милана"
+            >
+
+            <div class="hero-photo__caption">
+                Самая красивая Киця ✨
+            </div>
+
+        </div>
+
+        <div class="hero-sticker hero-sticker--heart">
+            💗
+        </div>
+
+        <div class="hero-sticker hero-sticker--star">
+            ✨
+        </div>
+
+        <div class="hero-sticker hero-sticker--cake">
+            🎂
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+    <!-- История -->
+    <section class="story" id="story">
+
+        <div class="story__container">
+
+            <p class="story__label">
+                Как всё начиналось
+            </p>
+
+            <h2 class="story__title">
+                Наша маленькая история 💞
+            </h2>
+
+            <div class="story__cards">
+
+                <article class="story-card">
+
+                    <div class="story-card__icon">🎄</div>
+
+                    <p class="story-card__number">01</p>
+
+                    <h3>Новогодняя встреча</h3>
+
+                    <p>
+                        Нас познакомили на Новый год в кругу компании.
+                        Тогда я ещё не знал, насколько важной частью
+                        моей жизни ты станешь.
+                    </p>
+
+                </article>
+
+                <article class="story-card">
+
+                    <div class="story-card__icon">💗</div>
+
+                    <p class="story-card__number">02</p>
+
+                    <h3>Тот самый день</h3>
+
+                    <p>
+                        Мне особенно запомнилось, как в тот же день
+                        мы просто лежали рядом. Обычный момент,
+                        который стал для меня очень тёплым воспоминанием.
+                    </p>
+
+                </article>
+
+                <article class="story-card">
+
+                    <div class="story-card__icon">🚆</div>
+
+                    <p class="story-card__number">03</p>
+
+                    <h3>Расстояние не мешает</h3>
+
+                    <p>
+                        Я часто приезжаю к тебе,
+                        потому что любая дорога становится лёгкой,
+                        когда в её конце меня ждёшь ты.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Фотогалерея -->
+    <section class="gallery" id="gallery">
+
+        <div class="gallery__container">
+
+            <p class="gallery__label">
+                Счастье в фотографиях
+            </p>
+
+            <h2 class="gallery__title">
+                Наши тёплые моменты 📸
+            </h2>
+
+            <p class="gallery__text">
+                Каждая фотография хранит момент,
+                к которому мне хочется возвращаться.
+            </p>
+
+            <div class="gallery__photos">
+
+                <figure class="photo-card photo-card--left">
+
+                    <img
+                        src="images/photo-1.jpg"
+                        alt="Твоя первая фотография"
+                    >
+
+                    <figcaption>
+                        Всегда рядом с тобой 💗
+                    </figcaption>
+
+                </figure>
+
+                <figure class="photo-card photo-card--center">
+
+                    <img
+                       src="{{ url_for('static', filename='images/photo-2.jpg') }}"
+                        alt="Твоя фотография"
+                    >
+
+                    <figcaption>
+                        Ты и Жека 💗
+                    </figcaption>
+
+                </figure>
+
+                <figure class="photo-card photo-card--right">
+
+                    <img
+                      src="{{ url_for('static', filename='images/photo-3.jpg') }}"
+                        alt="Твоя третья фотография"
+                    >
+
+                    <figcaption>
+                        Один из любимых моментов ✨
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Главное поздравление -->
+<section class="birthday-wish" id="birthdayWish">
+
+    <div class="birthday-wish__card">
+
+        <p class="birthday-wish__label">
+            Самое главное
+        </p>
+
+        <h2 class="birthday-wish__title">
+            Милана, с днём рождения! 🎂
+        </h2>
+
+        <div class="birthday-wish__heart">
+            💗
+        </div>
+
+        <p class="birthday-wish__text">
+            Моя Киця, я хочу пожелать тебе как можно больше
+            счастливых моментов, искренних улыбок и исполнения
+            всех твоих желаний.
+        </p>
+
+        <p class="birthday-wish__text">
+            Оставайся такой же милой, красивой и особенной.
+            Я очень рад, что однажды мы встретились,
+            и хочу ещё много раз создавать с тобой
+            наши тёплые воспоминания.
+        </p>
+
+        <button
+            class="birthday-wish__button"
+            id="celebrationButton"
+        >
+            Запустить праздничный салют 🎉
+        </button>
+
+    </div>
+
+</section>
+
+<button
+    class="gift-button"
+    id="giftButton"
+    hidden
+>
+    Получить подарок 🎁
+</button>
+
+<!-- Окно получения подарка -->
+<div
+    class="gift-modal"
+    id="giftModal"
+    aria-hidden="true"
+>
+    <div class="gift-modal__card">
+
+        <div class="gift-modal__icon">
+            🎁
+        </div>
+
+        <h2>
+            Подарок уже в пути!
+        </h2>
+
+        <p>
+            Он придёт в течение 30 секунд 💗
+        </p>
+
+        <button id="closeGiftModal">
+            Хорошо ✨
+        </button>
+
+    </div>
+</div>
+
+    <!-- Секретное окно -->
+    <div
+        class="secret-modal"
+        id="secretModal"
+        aria-hidden="true"
+    >
+
+        <div class="secret-modal__box">
+
+            <button
+                class="secret-modal__close"
+                id="closeSecret"
+                aria-label="Закрыть секрет"
+            >
+                ×
+            </button>
+
+            <!-- Пиксельный котик -->
+            <svg
+                class="pixel-cat"
+                viewBox="0 0 24 24"
+                aria-label="Пиксельный котик с сердечком"
+                role="img"
+            >
+
+                <!-- Контур котика -->
+                <g fill="#5c3a4e">
+                    <rect x="4" y="2" width="5" height="6"/>
+                    <rect x="15" y="2" width="5" height="6"/>
+                    <rect x="4" y="6" width="16" height="9"/>
+                    <rect x="7" y="15" width="10" height="7"/>
+                    <rect x="5" y="21" width="5" height="2"/>
+                    <rect x="14" y="21" width="5" height="2"/>
+                </g>
+
+                <!-- Ушки -->
+                <g fill="#ff9bbc">
+                    <rect x="5" y="3" width="3" height="4"/>
+                    <rect x="16" y="3" width="3" height="4"/>
+                </g>
+
+                <!-- Белая шерсть -->
+                <g fill="#f7f3ff">
+                    <rect x="5" y="6" width="14" height="8"/>
+                    <rect x="6" y="14" width="12" height="1"/>
+                    <rect x="8" y="15" width="8" height="6"/>
+                    <rect x="6" y="21" width="3" height="1"/>
+                    <rect x="15" y="21" width="3" height="1"/>
+                </g>
+
+                <!-- Серые пятна -->
+                <g fill="#aaa0bd">
+                    <rect x="5" y="6" width="4" height="2"/>
+                    <rect x="5" y="8" width="3" height="2"/>
+
+                    <rect x="16" y="6" width="3" height="3"/>
+                    <rect x="15" y="7" width="2" height="2"/>
+
+                    <rect x="8" y="15" width="3" height="4"/>
+                    <rect x="9" y="19" width="3" height="2"/>
+                </g>
+
+                <!-- Глаза -->
+                <g fill="#5c3a4e">
+                    <rect x="8" y="9" width="2" height="2"/>
+                    <rect x="14" y="9" width="2" height="2"/>
+                </g>
+
+                <!-- Блики в глазах -->
+                <g fill="#ffffff">
+                    <rect x="8" y="9" width="1" height="1"/>
+                    <rect x="14" y="9" width="1" height="1"/>
+                </g>
+
+                <!-- Носик -->
+                <rect
+                    x="11"
+                    y="11"
+                    width="2"
+                    height="1"
+                    fill="#ff7da8"
+                />
+
+                <!-- Ротик -->
+                <g fill="#5c3a4e">
+                    <rect x="10" y="12" width="1" height="1"/>
+                    <rect x="13" y="12" width="1" height="1"/>
+                    <rect x="11" y="13" width="2" height="1"/>
+                </g>
+
+                <!-- Щёчки -->
+                <g fill="#ff9bbc">
+                    <rect x="5" y="12" width="2" height="1"/>
+                    <rect x="17" y="12" width="2" height="1"/>
+                </g>
+
+                <!-- Сердечко -->
+                <g fill="#ff4f8b">
+                    <rect x="8" y="14" width="4" height="2"/>
+                    <rect x="13" y="14" width="4" height="2"/>
+                    <rect x="7" y="16" width="11" height="3"/>
+                    <rect x="8" y="19" width="9" height="2"/>
+                    <rect x="10" y="21" width="5" height="1"/>
+                    <rect x="11" y="22" width="3" height="1"/>
+                </g>
+
+                <!-- Блик на сердечке -->
+                <g fill="#ffb5cf">
+                    <rect x="9" y="15" width="2" height="1"/>
+                    <rect x="8" y="16" width="2" height="1"/>
+                </g>
+
+                <!-- Лапки поверх сердечка -->
+                <g fill="#5c3a4e">
+                    <rect x="6" y="15" width="4" height="4"/>
+                    <rect x="15" y="15" width="4" height="4"/>
+                </g>
+
+                <g fill="#f7f3ff">
+                    <rect x="7" y="15" width="3" height="3"/>
+                    <rect x="15" y="15" width="3" height="3"/>
+                </g>
+
+            </svg>
+
+            <p class="secret-modal__label">
+                Секретный вопрос для Кици
+            </p>
+
+            <h2 class="secret-modal__title">
+                Ты меня любишь?
+            </h2>
+
+            <div class="secret-modal__buttons">
+
+                <button
+                    class="answer-button answer-button--yes"
+                    id="yesButton"
+                >
+                    Да 💗
+                </button>
+
+                <button
+                    class="answer-button answer-button--no"
+                    id="noButton"
+                >
+                    Нет
+                </button>
+
+            </div>
+
+            <p
+                class="secret-modal__answer"
+                id="secretAnswer"
+            >
+                Я тоже тебя очень люблю, моя Киця! 💞
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript подключаем в самом конце -->
+   <script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+</html>
