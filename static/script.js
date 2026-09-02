@@ -263,12 +263,12 @@ const celebrationButton = document.querySelector(
 );
 
 const confettiColors = [
-    "#ff6fa9",
-    "#ffd84d",
-    "#9d75ec",
-    "#76d8ff",
-    "#7be0ae",
-    "#ffffff"
+    "#7d0f2f",
+    "#b8965d",
+    "#5f426f",
+    "#8e8396",
+    "#d8c7aa",
+    "#f1e8dc"
 ];
 
 celebrationButton?.addEventListener("click", function () {
