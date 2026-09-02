@@ -42,7 +42,7 @@ def receive_gift():
     if not bot_token or not chat_id:
         return jsonify({
             "success": False,
-            "message": "Telegram не настроен"
+            "message": "Telegram не налаштований"
         }), 500
 
     telegram_url = (
@@ -51,8 +51,8 @@ def receive_gift():
     )
 
     telegram_message = (
-        "🎁 Милана нажала кнопку «Получить подарок»!\n\n"
-        "Пора вручать подарок 💗"
+        "🎁 Мілана натиснула кнопку «Отримати подарунок»!\n\n"
+        "Час вручати подарунок 💗"
     )
 
     try:
@@ -74,11 +74,11 @@ def receive_gift():
         })
 
     except requests.RequestException as error:
-        print("Ошибка Telegram:", error)
+        print("Помилка Telegram:", error)
 
         return jsonify({
             "success": False,
-            "message": "Не удалось отправить сообщение"
+            "message": "Не вдалося надіслати повідомлення"
         }), 500
 
 

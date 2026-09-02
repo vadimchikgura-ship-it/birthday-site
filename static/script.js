@@ -196,7 +196,7 @@ noButton.addEventListener("click", function (event) {
 
 // Ответ после нажатия «Да»
 yesButton.addEventListener("click", function () {
-    secretTitle.textContent = "Я так и знал! 💗";
+    secretTitle.textContent = "Я так і знав! 💗";
 
     secretAnswer.style.display = "block";
     yesButton.style.display = "none";
@@ -327,11 +327,11 @@ celebrationButton?.addEventListener("click", function () {
         }, 6000);
     }
 
-    celebrationButton.textContent = "С днём рождения, Киця! 💗";
+    celebrationButton.textContent = "З днем народження, Кицю! 💗";
 
     setTimeout(function () {
         celebrationButton.textContent =
-            "Запустить праздничный салют 🎉";
+            "Запустити святковий салют 🎉";
     }, 3500);
 });
 
@@ -352,7 +352,7 @@ celebrationButton.addEventListener("click", function () {
 // Отправляем уведомление через Flask
 giftButton.addEventListener("click", async function () {
     giftButton.disabled = true;
-    giftButton.textContent = "Отправляем... 🎁";
+    giftButton.textContent = "Надсилаємо... 🎁";
 
     try {
         const response = await fetch("/api/gift", {
@@ -377,10 +377,10 @@ giftButton.addEventListener("click", async function () {
 
     } catch (error) {
         giftButton.disabled = false;
-        giftButton.textContent = "Попробовать ещё раз 🎁";
+        giftButton.textContent = "Спробувати ще раз 🎁";
 
         alert(
-            "Не получилось отправить сообщение. Попробуй ещё раз."
+            "Не вдалося надіслати повідомлення. Спробуй ще раз."
         );
     }
 });
