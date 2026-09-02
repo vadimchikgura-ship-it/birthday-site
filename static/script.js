@@ -1,19 +1,108 @@
 // Находим кнопку на первом экране
 const startButton = document.querySelector("#startButton");
 
-// Находим раздел с нашей историей
-const storySection = document.querySelector("#story");
+// Находим модальное окно со сториями
+const storyModal = document.querySelector("#storyModal");
+const closeStoryModal = document.querySelector("#closeStoryModal");
+const storyCards = document.querySelectorAll(".story-card--modal");
 
-// Следим за нажатием на кнопку
+// При нажатии на кнопку "Открыть мой подарок" открываем модальное окно
 startButton.addEventListener("click", function () {
-
-    // Плавно прокручиваем страницу к истории
-    storySection.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-
+    storyModal.classList.add("is-open");
+    storyModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
 });
+
+// Закрываем модальное окно
+function closeStory() {
+    storyModal.classList.remove("is-open");
+    storyModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    
+    // Сбрасываем все карточки при закрытии
+    storyCards.forEach(card => {
+        card.classList.remove("is-open");
+        const preview = card.querySelector(".story-card__preview");
+        const full = card.querySelector(".story-card__full");
+        preview.hidden = false;
+        full.hidden = true;
+    });
+}
+
+// Закрытие через кнопку
+closeStoryModal.addEventListener("click", closeStory);
+
+// Закрытие при нажатии на фон
+storyModal.addEventListener("click", function (event) {
+    if (event.target === storyModal) {
+        closeStory();
+    }
+});
+
+// Закрытие клавишей Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !storyModal.getAttribute("aria-hidden")) {
+        closeStory();
+    }
+});
+
+// При клике на карточку показываем полный текст
+storyCards.forEach(card => {
+    card.addEventListener("click", function () {
+        card.classList.toggle("is-open");
+        
+        const preview = card.querySelector(".story-card__preview");
+        const full = card.querySelector(".story-card__full");
+        
+        if (card.classList.contains("is-open")) {
+            preview.hidden = true;
+            full.hidden = false;
+        } else {
+            preview.hidden = false;
+            full.hidden = true;
+        }
+    });
+});
+
+
+
+// Управление галереей слайдер с бесконечным циклом
+const galleryPhotos = document.querySelector("#galleryPhotos");
+
+const photoCard = document.querySelector(".photo-card");
+const photoWidth = photoCard?.offsetWidth || 320;
+const gap = 25;
+const cardWithGap = photoWidth + gap;
+const totalCards = document.querySelectorAll(".photo-card").length;
+const halfCycle = (totalCards / 2) * cardWithGap;
+
+// Автоматическая прокрутка слева направо
+let autoScrollSpeed = 2; // пиксели в мс (увеличено с 1 на 2)
+let autoScrollInterval;
+
+function startAutoScroll() {
+    autoScrollInterval = setInterval(function () {
+        galleryPhotos.scrollLeft += autoScrollSpeed;
+        
+        // Когда доходим до половины цикла, прыгаем в начало второго набора
+        if (galleryPhotos.scrollLeft >= halfCycle - 10) {
+            galleryPhotos.scrollLeft = 0;
+        }
+    }, 30);
+}
+
+// Останавливаем автоскролл при наведении
+galleryPhotos?.addEventListener("mouseenter", function () {
+    clearInterval(autoScrollInterval);
+});
+
+// Возобновляем автоскролл когда мышь уходит
+galleryPhotos?.addEventListener("mouseleave", function () {
+    startAutoScroll();
+});
+
+// Начинаем автоскролл при загрузке страницы
+startAutoScroll();
 
 // Секретные элементы
 const secretHeart = document.querySelector("#secretHeart");
@@ -182,7 +271,7 @@ const confettiColors = [
     "#ffffff"
 ];
 
-celebrationButton.addEventListener("click", function () {
+celebrationButton?.addEventListener("click", function () {
 
     // Создаём 140 элементов конфетти
     for (let i = 0; i < 140; i++) {

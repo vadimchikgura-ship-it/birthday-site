@@ -108,216 +108,72 @@
 </div>
 
 </main>
-    <!-- История -->
-    <section class="story" id="story">
 
-        <div class="story__container">
+    <!-- Модальное окно со сториями -->
+    <div
+        class="story-modal"
+        id="storyModal"
+        aria-hidden="true"
+    >
+        <div class="story-modal__overlay"></div>
+        
+        <div class="story-modal__content">
+            <button 
+                class="story-modal__close"
+                id="closeStoryModal"
+                aria-label="Закрыть"
+            >
+                ×
+            </button>
 
-            <p class="story__label">
-                Как всё начиналось
-            </p>
+            <div class="story-modal__container">
+                <h2 class="story-modal__title">
+                    Наша маленькая история 💞
+                </h2>
 
-            <h2 class="story__title">
-                Наша маленькая история 💞
-            </h2>
+                <div class="story-modal__cards">
+                    <article class="story-card story-card--modal" data-story="0">
+                        <div class="story-card__icon">🎄</div>
+                        <h3>Новогодняя встреча</h3>
+                        <p class="story-card__preview">Нас познакомили на Новый год...</p>
+                        <div class="story-card__full" hidden>
+                            <p>
+                                Нас познакомили на Новый год в кругу компании.
+                                Тогда я ещё не знал, насколько важной частью
+                                моей жизни ты станешь.
+                            </p>
+                        </div>
+                    </article>
 
-            <div class="story__cards">
+                    <article class="story-card story-card--modal" data-story="1">
+                        <div class="story-card__icon">💗</div>
+                        <h3>Тот самый день</h3>
+                        <p class="story-card__preview">Мне особенно запомнилось...</p>
+                        <div class="story-card__full" hidden>
+                            <p>
+                                Мне особенно запомнилось, как в тот же день
+                                мы просто лежали рядом. Обычный момент,
+                                который стал для меня очень тёплым воспоминанием.
+                            </p>
+                        </div>
+                    </article>
 
-                <article class="story-card">
-
-                    <div class="story-card__icon">🎄</div>
-
-                    <p class="story-card__number">01</p>
-
-                    <h3>Новогодняя встреча</h3>
-
-                    <p>
-                        Нас познакомили на Новый год в кругу компании.
-                        Тогда я ещё не знал, насколько важной частью
-                        моей жизни ты станешь.
-                    </p>
-
-                </article>
-
-                <article class="story-card">
-
-                    <div class="story-card__icon">💗</div>
-
-                    <p class="story-card__number">02</p>
-
-                    <h3>Тот самый день</h3>
-
-                    <p>
-                        Мне особенно запомнилось, как в тот же день
-                        мы просто лежали рядом. Обычный момент,
-                        который стал для меня очень тёплым воспоминанием.
-                    </p>
-
-                </article>
-
-                <article class="story-card">
-
-                    <div class="story-card__icon">🚆</div>
-
-                    <p class="story-card__number">03</p>
-
-                    <h3>Расстояние не мешает</h3>
-
-                    <p>
-                        Я часто приезжаю к тебе,
-                        потому что любая дорога становится лёгкой,
-                        когда в её конце меня ждёшь ты.
-                    </p>
-
-                </article>
-
+                    <article class="story-card story-card--modal" data-story="2">
+                        <div class="story-card__icon">🚆</div>
+                        <h3>Расстояния не мешает</h3>
+                        <p class="story-card__preview">Я часто приезжаю к тебе...</p>
+                        <div class="story-card__full" hidden>
+                            <p>
+                                Я часто приезжаю к тебе,
+                                потому что любая дорога становится лёгкой,
+                                когда в её конце меня ждёшь ты.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
-
         </div>
-
-    </section>
-
-
-    <!-- Фотогалерея -->
-    <section class="gallery" id="gallery">
-
-        <div class="gallery__container">
-
-            <p class="gallery__label">
-                Счастье в фотографиях
-            </p>
-
-            <h2 class="gallery__title">
-                Наши тёплые моменты 📸
-            </h2>
-
-            <p class="gallery__text">
-                Каждая фотография хранит момент,
-                к которому мне хочется возвращаться.
-            </p>
-
-            <div class="gallery__photos">
-
-                <figure class="photo-card photo-card--left">
-
-                    <img
-                        src="images/photo-1.jpg"
-                        alt="Твоя первая фотография"
-                    >
-
-                    <figcaption>
-                        Всегда рядом с тобой 💗
-                    </figcaption>
-
-                </figure>
-
-                <figure class="photo-card photo-card--center">
-
-                    <img
-                       src="{{ url_for('static', filename='images/photo-2.jpg') }}"
-                        alt="Твоя фотография"
-                    >
-
-                    <figcaption>
-                        Ты и Жека 💗
-                    </figcaption>
-
-                </figure>
-
-                <figure class="photo-card photo-card--right">
-
-                    <img
-                      src="{{ url_for('static', filename='images/photo-3.jpg') }}"
-                        alt="Твоя третья фотография"
-                    >
-
-                    <figcaption>
-                        Один из любимых моментов ✨
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Главное поздравление -->
-<section class="birthday-wish" id="birthdayWish">
-
-    <div class="birthday-wish__card">
-
-        <p class="birthday-wish__label">
-            Самое главное
-        </p>
-
-        <h2 class="birthday-wish__title">
-            Милана, с днём рождения! 🎂
-        </h2>
-
-        <div class="birthday-wish__heart">
-            💗
-        </div>
-
-        <p class="birthday-wish__text">
-            Моя Киця, я хочу пожелать тебе как можно больше
-            счастливых моментов, искренних улыбок и исполнения
-            всех твоих желаний.
-        </p>
-
-        <p class="birthday-wish__text">
-            Оставайся такой же милой, красивой и особенной.
-            Я очень рад, что однажды мы встретились,
-            и хочу ещё много раз создавать с тобой
-            наши тёплые воспоминания.
-        </p>
-
-        <button
-            class="birthday-wish__button"
-            id="celebrationButton"
-        >
-            Запустить праздничный салют 🎉
-        </button>
-
     </div>
-
-</section>
-
-<button
-    class="gift-button"
-    id="giftButton"
-    hidden
->
-    Получить подарок 🎁
-</button>
-
-<!-- Окно получения подарка -->
-<div
-    class="gift-modal"
-    id="giftModal"
-    aria-hidden="true"
->
-    <div class="gift-modal__card">
-
-        <div class="gift-modal__icon">
-            🎁
-        </div>
-
-        <h2>
-            Подарок уже в пути!
-        </h2>
-
-        <p>
-            Он придёт в течение 30 секунд 💗
-        </p>
-
-        <button id="closeGiftModal">
-            Хорошо ✨
-        </button>
-
-    </div>
-</div>
 
     <!-- Секретное окно -->
     <div
@@ -481,8 +337,182 @@
 
     </div>
 
+    <!-- Фотогалерея -->
+    <section class="gallery" id="gallery">
 
-    <!-- JavaScript подключаем в самом конце -->
+        <div class="gallery__container">
+
+            <p class="gallery__label">
+                Счастье в фотографиях
+            </p>
+
+            <h2 class="gallery__title">
+                Наши тёплые моменты 📸
+            </h2>
+
+            <p class="gallery__text">
+                Каждая фотография хранит момент,
+                к которому мне хочется возвращаться.
+            </p>
+
+            <div class="gallery__wrapper">
+                <div class="gallery__photos" id="galleryPhotos">
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-1.jpg') }}" alt="Фотография 1">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-2.jpg') }}" alt="Фотография 2">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-3.jpg') }}" alt="Фотография 3">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-4.jpg') }}" alt="Фотография 4">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-6.jpg') }}" alt="Фотография 6">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-7.jpg') }}" alt="Фотография 7">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-8.jpg') }}" alt="Фотография 8">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-9.jpg') }}" alt="Фотография 9">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-10.jpg') }}" alt="Фотография 10">
+                    </figure>
+
+                    <!-- Дублируем фотографии для бесконечного цикла -->
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-1.jpg') }}" alt="Фотография 1">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-2.jpg') }}" alt="Фотография 2">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-3.jpg') }}" alt="Фотография 3">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-4.jpg') }}" alt="Фотография 4">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-6.jpg') }}" alt="Фотография 6">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-7.jpg') }}" alt="Фотография 7">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-8.jpg') }}" alt="Фотография 8">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-9.jpg') }}" alt="Фотография 9">
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="{{ url_for('static', filename='images/photo-10.jpg') }}" alt="Фотография 10">
+                    </figure>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Главное поздравление -->
+<section class="birthday-wish" id="birthdayWish">
+
+    <div class="birthday-wish__card">
+
+        <p class="birthday-wish__label">
+            Самое главное
+        </p>
+
+        <h2 class="birthday-wish__title">
+            Милана, с днём рождения! 🎂
+        </h2>
+
+        <div class="birthday-wish__heart">
+            💗
+        </div>
+
+        <p class="birthday-wish__text">
+            Моя Киця, я хочу пожелать тебе как можно больше
+            счастливых моментов, искренних улыбок и исполнения
+            всех твоих желаний.
+        </p>
+
+        <p class="birthday-wish__text">
+            Оставайся такой же милой, красивой и особенной.
+            Я очень рад, что однажды мы встретились,
+            и хочу ещё много раз создавать с тобой
+            наши тёплые воспоминания.
+        </p>
+
+        <button
+            class="birthday-wish__button"
+            id="celebrationButton"
+        >
+            Запустить праздничный салют 🎉
+        </button>
+
+    </div>
+
+</section>
+
+<button
+    class="gift-button"
+    id="giftButton"
+    hidden
+>
+    Получить подарок 🎁
+</button>
+
+<!-- Окно получения подарка -->
+<div
+    class="gift-modal"
+    id="giftModal"
+    aria-hidden="true"
+>
+    <div class="gift-modal__card">
+
+        <div class="gift-modal__icon">
+            🎁
+        </div>
+
+        <h2>
+            Подарок уже в пути!
+        </h2>
+
+        <p>
+            Он придёт в течение 30 секунд 💗
+        </p>
+
+        <button id="closeGiftModal">
+            Хорошо ✨
+        </button>
+
+    </div>
+</div>
    <script
     src="{{ url_for('static', filename='script.js') }}"
 ></script>

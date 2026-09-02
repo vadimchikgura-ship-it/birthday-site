@@ -16,10 +16,10 @@ html {
 body {
     width: 100%;
 
-    color: #5c3a4e;
+    color: #d4c5db;
     font-family: "Trebuchet MS", Arial, sans-serif;
 
-    background-color: #fff8fc;
+    background-color: #0f0f1e;
 
     overflow-x: hidden;
 }
@@ -48,18 +48,18 @@ button {
     background:
         radial-gradient(
             circle at 18% 18%,
-            rgba(255, 255, 255, 0.85) 0 6%,
+            rgba(100, 50, 100, 0.3) 0 6%,
             transparent 6.5%
         ),
         radial-gradient(
             circle at 82% 25%,
-            rgba(255, 255, 255, 0.55) 0 4%,
+            rgba(80, 40, 120, 0.2) 0 4%,
             transparent 4.5%
         ),
         linear-gradient(
             135deg,
-            #ffd9e8,
-            #eadcff
+            #1a0a2e,
+            #16213e
         );
 
     overflow: hidden;
@@ -86,16 +86,16 @@ button {
     background:
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, 0.96),
-            rgba(255, 247, 252, 0.92)
+            rgba(30, 15, 45, 0.95),
+            rgba(25, 10, 40, 0.92)
         );
 
-    border: 4px solid #ffffff;
+    border: 3px solid #6b4c8a;
     border-radius: 45px;
 
     box-shadow:
-        0 25px 60px rgba(116, 71, 104, 0.2),
-        inset 0 0 0 2px rgba(255, 185, 215, 0.3);
+        0 25px 60px rgba(30, 10, 50, 0.5),
+        inset 0 0 0 1px rgba(150, 100, 180, 0.2);
 }
 
 .hero__copy {
@@ -112,13 +112,13 @@ button {
     margin-bottom: 25px;
     padding: 11px 17px;
 
-    color: #c34f84;
+    color: #d4a5c2;
     font-size: 14px;
     font-weight: bold;
 
-    background-color: #ffe6f0;
+    background-color: rgba(80, 40, 100, 0.4);
 
-    border: 2px dashed #f18ab6;
+    border: 2px dashed #8b5a9e;
     border-radius: 50px;
 
     transform: rotate(-1deg);
@@ -129,7 +129,7 @@ button {
 .hero__title {
     margin-bottom: 25px;
 
-    color: #59384b;
+    color: #e8d5f2;
     font-size: clamp(48px, 7vw, 82px);
     line-height: 0.98;
     letter-spacing: -3px;
@@ -140,11 +140,11 @@ button {
 
     margin-top: 12px;
 
-    color: #f064a0;
+    color: #c9a8d8;
 
     text-shadow:
-        3px 3px 0 #ffe1ed,
-        6px 6px 0 rgba(240, 100, 160, 0.12);
+        3px 3px 0 #5a3a7a,
+        6px 6px 0 rgba(150, 100, 180, 0.2);
 
     transform: rotate(-1deg);
 }
@@ -153,7 +153,7 @@ button {
     max-width: 540px;
     margin: 0 0 32px;
 
-    color: #74596a;
+    color: #b8a8c8;
     font-size: 19px;
     line-height: 1.7;
 }
@@ -175,16 +175,16 @@ button {
     background:
         linear-gradient(
             135deg,
-            #ff76ac,
-            #a77cff
+            #6b3a7d,
+            #4a2a6b
         );
 
-    border: 3px solid #ffffff;
+    border: 3px solid #8b5a9e;
     border-radius: 50px;
 
     box-shadow:
-        0 10px 0 #c84f87,
-        0 18px 30px rgba(200, 79, 135, 0.25);
+        0 10px 0 #3a1a5b,
+        0 18px 30px rgba(50, 20, 70, 0.4);
 
     cursor: pointer;
 
@@ -201,8 +201,8 @@ button {
     transform: translateY(7px);
 
     box-shadow:
-        0 3px 0 #c84f87,
-        0 8px 15px rgba(200, 79, 135, 0.2);
+        0 3px 0 #3a1a5b,
+        0 8px 15px rgba(50, 20, 70, 0.3);
 }
 
 
@@ -229,14 +229,14 @@ button {
 
     padding: 14px 14px 24px;
 
-    background-color: #ffffff;
+    background-color: #1a0a2e;
 
-    border: 3px solid #ffe0ed;
+    border: 3px solid #6b4c8a;
     border-radius: 22px;
 
     box-shadow:
-        15px 18px 0 #f7bad3,
-        25px 30px 45px rgba(91, 56, 76, 0.22);
+        15px 18px 0 #4a3a6a,
+        25px 30px 45px rgba(30, 10, 50, 0.4);
 
     transform: rotate(4deg);
 
@@ -267,7 +267,7 @@ button {
 .hero-photo__caption {
     padding-top: 17px;
 
-    color: #c55084;
+    color: #c9a8d8;
     font-size: 17px;
     font-weight: bold;
     text-align: center;
@@ -288,12 +288,12 @@ button {
 
     font-size: 38px;
 
-    background-color: #ffffff;
+    background-color: #2a1a3a;
 
-    border: 3px solid #ffd8e9;
+    border: 3px solid #6b4c8a;
     border-radius: 50%;
 
-    box-shadow: 0 10px 25px rgba(92, 58, 78, 0.18);
+    box-shadow: 0 10px 25px rgba(30, 10, 50, 0.3);
 
     animation: stickerBounce 2s steps(2, end) infinite;
 }
@@ -449,7 +449,7 @@ button {
     width: 100%;
     padding: 100px 20px;
 
-    background-color: #fff8fc;
+    background-color: #0f0f1e;
 }
 
 .story__container {
@@ -463,7 +463,7 @@ button {
 .story__label {
     margin-bottom: 10px;
 
-    color: #d85d93;
+    color: #b8a8c8;
     font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
@@ -473,7 +473,7 @@ button {
 .story__title {
     margin-bottom: 50px;
 
-    color: #5c3a4e;
+    color: #e8d5f2;
     font-size: clamp(35px, 6vw, 55px);
 }
 
@@ -490,12 +490,12 @@ button {
 
     text-align: left;
 
-    background-color: #ffffff;
+    background-color: #1a0a2e;
 
-    border: 3px solid #ffe0ed;
+    border: 3px solid #6b4c8a;
     border-radius: 28px;
 
-    box-shadow: 0 15px 35px rgba(116, 71, 104, 0.1);
+    box-shadow: 0 15px 35px rgba(30, 10, 50, 0.2);
 
     transition:
         transform 0.3s ease,
@@ -548,8 +548,8 @@ button {
     background:
         linear-gradient(
             180deg,
-            #fff8fc,
-            #f3e8ff
+            #0f0f1e,
+            #1a0a2e
         );
 }
 
@@ -564,7 +564,7 @@ button {
 .gallery__label {
     margin-bottom: 10px;
 
-    color: #a267d8;
+    color: #b8a8c8;
     font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
@@ -574,7 +574,7 @@ button {
 .gallery__title {
     margin-bottom: 15px;
 
-    color: #5c3a4e;
+    color: #e8d5f2;
     font-size: clamp(35px, 6vw, 55px);
 }
 
@@ -582,25 +582,42 @@ button {
     max-width: 550px;
     margin: 0 auto 60px;
 
-    color: #765b6d;
+    color: #b8a8c8;
     font-size: 18px;
     line-height: 1.7;
 }
 
-.gallery__photos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.gallery__wrapper {
+    position: relative;
+
+    display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 20px;
+
+    width: 100%;
+}
+
+.gallery__photos {
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    padding: 10px 0;
 }
 
 .photo-card {
+    flex: 0 0 320px;
+
     padding: 15px 15px 25px;
 
-    background-color: #ffffff;
+    background-color: #1a0a2e;
     border-radius: 8px;
 
-    box-shadow: 0 18px 40px rgba(91, 58, 78, 0.2);
+    box-shadow: 0 18px 40px rgba(30, 10, 50, 0.3);
 
     transition:
         transform 0.3s ease,
@@ -621,30 +638,63 @@ button {
 .photo-card figcaption {
     padding-top: 18px;
 
-    color: #765b6d;
-    font-size: 18px;
+    color: #b8a8c8;
+    font-size: 16px;
     font-weight: bold;
 }
 
-.photo-card--left {
-    transform: rotate(-5deg);
-}
-
-.photo-card--center {
-    transform: translateY(-15px) rotate(2deg);
-}
-
-.photo-card--right {
-    transform: rotate(5deg);
-}
-
 .photo-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 50px rgba(100, 50, 150, 0.3);
+}
+
+.gallery__button {
     position: relative;
-    z-index: 2;
 
-    transform: translateY(-12px) rotate(0deg) scale(1.04);
+    flex: 0 0 50px;
+    height: 50px;
 
-    box-shadow: 0 25px 50px rgba(91, 58, 78, 0.3);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6fa9,
+            #9d75ec
+        );
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+
+    box-shadow: 0 8px 20px rgba(100, 50, 150, 0.3);
+}
+
+.gallery__button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(100, 50, 150, 0.4);
+}
+
+.gallery__button:active {
+    transform: scale(0.95);
+}
+
+.gallery__button--prev {
+    order: -1;
+}
+
+.gallery__button--next {
+    order: 3;
 }
 
 
@@ -659,8 +709,8 @@ button {
     background:
         linear-gradient(
             145deg,
-            #f3e8ff,
-            #ffdfea
+            #0f0f1e,
+            #1a0a2e
         );
 }
 
@@ -673,18 +723,18 @@ button {
 
     text-align: center;
 
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(26, 10, 46, 0.9);
 
-    border: 4px solid #ffffff;
+    border: 3px solid #6b4c8a;
     border-radius: 35px;
 
-    box-shadow: 0 20px 50px rgba(116, 71, 104, 0.18);
+    box-shadow: 0 20px 50px rgba(30, 10, 50, 0.3);
 }
 
 .birthday-wish__label {
     margin-bottom: 12px;
 
-    color: #d85d93;
+    color: #b8a8c8;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -694,7 +744,7 @@ button {
 .birthday-wish__title {
     margin-bottom: 20px;
 
-    color: #5c3a4e;
+    color: #e8d5f2;
     font-size: clamp(34px, 6vw, 55px);
 }
 
@@ -721,7 +771,7 @@ button {
     max-width: 650px;
     margin: 0 auto 18px;
 
-    color: #765b6d;
+    color: #b8a8c8;
     font-size: 18px;
     line-height: 1.8;
 }
@@ -737,14 +787,14 @@ button {
     background:
         linear-gradient(
             135deg,
-            #ff6fa9,
-            #9d75ec
+            #6b3a7d,
+            #4a2a6b
         );
 
     border: none;
     border-radius: 50px;
 
-    box-shadow: 0 10px 25px rgba(216, 93, 147, 0.35);
+    box-shadow: 0 10px 25px rgba(100, 50, 150, 0.3);
 
     cursor: pointer;
 
@@ -863,16 +913,16 @@ button {
     text-align: center;
     font-family: "Press Start 2P", monospace;
 
-    background-color: #fff5fa;
+    background-color: #1a0a2e;
 
-    border: 6px solid #5c3a4e;
+    border: 6px solid #6b4c8a;
     border-radius: 0;
 
-    outline: 5px solid #ffffff;
+    outline: 5px solid #2a1a3a;
 
     box-shadow:
-        10px 10px 0 #ff8fba,
-        16px 16px 0 #5c3a4e;
+        10px 10px 0 #6b3a7d,
+        16px 16px 0 #6b4c8a;
 
     overflow-y: auto;
 }
@@ -890,12 +940,12 @@ button {
     font-size: 20px;
     font-weight: bold;
 
-    background-color: #ff6fa9;
+    background-color: #6b3a7d;
 
-    border: 4px solid #5c3a4e;
+    border: 4px solid #6b4c8a;
     border-radius: 0;
 
-    box-shadow: 4px 4px 0 #5c3a4e;
+    box-shadow: 4px 4px 0 #6b4c8a;
 
     cursor: pointer;
 }
@@ -1077,6 +1127,191 @@ button {
 
 
 /* =========================================
+   МОДАЛЬНОЕ ОКНО СО СТОРИЯМИ
+========================================= */
+
+.story-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.story-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.story-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(67, 39, 57, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+.story-modal__content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+
+    padding: 40px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff2f8
+        );
+
+    border: 5px solid #ffffff;
+    border-radius: 35px;
+
+    box-shadow: 0 25px 70px rgba(40, 20, 33, 0.4);
+
+    overflow-y: auto;
+}
+
+.story-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+
+    background-color: #ff6fa9;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.story-modal__close:hover {
+    background-color: #ff4a88;
+    transform: scale(1.1);
+}
+
+.story-modal__close:active {
+    transform: scale(0.95);
+}
+
+.story-modal__container {
+    text-align: center;
+}
+
+.story-modal__title {
+    margin-bottom: 40px;
+
+    color: #5c3a4e;
+    font-size: clamp(32px, 6vw, 48px);
+}
+
+.story-modal__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.story-card--modal {
+    position: relative;
+
+    padding: 30px 20px;
+
+    background-color: #fff8fc;
+
+    border: 3px solid #ffe0ed;
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.story-card--modal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(116, 71, 104, 0.15);
+}
+
+.story-card--modal.is-open {
+    background-color: #ffe8f2;
+}
+
+.story-card__icon {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 48px;
+
+    text-align: center;
+}
+
+.story-card--modal h3 {
+    margin-bottom: 15px;
+
+    color: #d85d93;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.story-card__preview {
+    color: #765b6d;
+    font-size: 15px;
+    line-height: 1.5;
+
+    margin: 0;
+    padding: 0;
+}
+
+.story-card__full {
+    color: #5c3a4e;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.story-card__full p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
    АДАПТАЦИЯ ПОД ПЛАНШЕТ
 ========================================= */
 
@@ -1131,21 +1366,31 @@ button {
         right: 0;
     }
 
-    .story__cards,
-    .gallery__photos {
+    .story__cards {
         grid-template-columns: 1fr;
     }
 
-    .gallery__photos {
-        max-width: 380px;
-        margin: 0 auto;
-        gap: 45px;
+    .gallery__wrapper {
+        gap: 15px;
     }
 
-    .photo-card--left,
-    .photo-card--center,
-    .photo-card--right {
-        transform: rotate(0deg);
+    .photo-card {
+        flex: 0 0 280px;
+    }
+
+    .gallery__button {
+        flex: 0 0 45px;
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+    .story-modal__content {
+        padding: 30px 25px;
+    }
+
+    .story-modal__cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1188,6 +1433,66 @@ button {
 
     .birthday-wish__button {
         width: 100%;
+    }
+
+    .story-modal__content {
+        padding: 30px 20px;
+        border-radius: 25px;
+        max-height: 90vh;
+    }
+
+    .story-modal__close {
+        top: 15px;
+        right: 15px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+    .story-modal__title {
+        margin-bottom: 25px;
+        font-size: clamp(26px, 5vw, 36px);
+    }
+
+    .story-modal__cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .story-card--modal {
+        padding: 25px 18px;
+    }
+
+    .story-card__icon {
+        font-size: 40px;
+    }
+
+    .story-card--modal h3 {
+        font-size: 18px;
+    }
+
+    .gallery__wrapper {
+        gap: 12px;
+    }
+
+    .photo-card {
+        flex: 0 0 240px;
+
+        padding: 12px 12px 20px;
+    }
+
+    .photo-card figcaption {
+        padding-top: 12px;
+        font-size: 14px;
+    }
+
+    .gallery__button {
+        flex: 0 0 40px;
+        height: 40px;
+
+        font-size: 18px;
     }
 }
 
@@ -1312,7 +1617,7 @@ button {
 
     padding: 20px;
 
-    background-color: rgba(67, 39, 57, 0.75);
+    background-color: rgba(15, 5, 30, 0.85);
     backdrop-filter: blur(8px);
 
     opacity: 0;
@@ -1343,14 +1648,14 @@ button {
     background:
         linear-gradient(
             145deg,
-            #ffffff,
-            #fff2f8
+            #1a0a2e,
+            #25152f
         );
 
-    border: 5px solid #ffffff;
+    border: 3px solid #6b4c8a;
     border-radius: 35px;
 
-    box-shadow: 0 25px 70px rgba(40, 20, 33, 0.4);
+    box-shadow: 0 25px 70px rgba(30, 10, 50, 0.5);
 }
 
 .gift-modal__icon {
@@ -1379,14 +1684,14 @@ button {
 .gift-modal__card h2 {
     margin-bottom: 15px;
 
-    color: #5c3a4e;
+    color: #e8d5f2;
     font-size: clamp(29px, 7vw, 42px);
 }
 
 .gift-modal__card p {
     margin-bottom: 28px;
 
-    color: #765b6d;
+    color: #b8a8c8;
     font-size: 19px;
     line-height: 1.6;
 }
@@ -1401,8 +1706,8 @@ button {
     background:
         linear-gradient(
             135deg,
-            #ff6fa9,
-            #9d75ec
+            #6b3a7d,
+            #4a2a6b
         );
 
     border: none;
